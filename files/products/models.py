@@ -10,3 +10,6 @@ class Product(models.Model):
     summary     = models.TextField(blank = False,null = False)
     #blank has to be related to field and null is related to dabase
     feature     = models.BooleanField(default = True)
+
+    def get_absolute_url(self):
+        return f"/product/{self.id}/"
