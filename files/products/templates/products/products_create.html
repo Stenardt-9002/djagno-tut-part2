@@ -1,0 +1,27 @@
+{%extends 'base.html' %}
+{% block content %}
+
+
+
+  <!-- <form action = 'htt ' method="get"> -->
+    <!-- get get ionsformation post give information -->
+    <!-- #security easure -->
+    <!-- post uses csrf tiken to avoid display of lin -->
+  <!-- {%csrf_token%} -->
+  <!-- <form action = '.' method = 'POST'> {%csrf_token %} -->
+     <!-- <input type="text" name="q" placeholder="Your search" /> -->
+
+  <!-- {{form.as_p}} -->
+  <!-- {{form.as_ul}}
+
+  <input type="submit" name="" value="Save"/>
+  </form> -->
+
+  <form class="" action="." method="post"> {% csrf_token %}
+    <!-- <input type="text" name="my_title" placeholder = "YOUR title" value=""/> -->
+    {{form.as_p}}
+    <!-- bitchas built in feaurwe -->
+    <input type="submit" value="Save" />
+  </form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- Piggy bags in the hoe -->
+    <p>
+      {{my_text}},{{my_no}}
+    </p>
+
+  <ul>
+    {% for abc in my_lit %}
+      {% if abc == 312%}
+        <li>{{forloop.counter}} - {{abc|add:21}}</li>
+      {% elif abc == "ad" %}
+      <li>
+        {{forloop.counter}} -  {{abc}}
+      </li>
+      <li>This is not a network</li>
+      {%else %}
+  <li>  {{forloop.counter}} -  {{abc}}  </li>
+    {% endif %}
+
+    {% endfor %}
+  </ul>
+  </body>
+</html>
