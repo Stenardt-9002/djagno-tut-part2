@@ -18,7 +18,9 @@ from django.urls import path
 from pages.views import home_view
 from pages.views import citaact,about_view
 
-from products.views import product_detail_view , product_create_view
+# from products.views import product_detail_view , product_create_view,render_initial_data
+from products.views import render_initial_data,dynamic_lookup_view
+from products.views import *
 
 
 
@@ -27,7 +29,11 @@ urlpatterns = [
     path('',home_view,name='home'),
     path('contact/',citaact,name='cuntact'),
     path('about/',about_view,name = 'about'),
-    path('create/',product_create_view,name = 'create'),
-    path('product/',product_detail_view,name='product'),
+    #path('create/',product_create_view,name = 'create'),
+    path('create/',render_initial_data,name = 'create'),
+    # path('product/',product_detail_view,name='product'),
+    path('product/',render_initial_data,name='product'),
+    path('product/<int:my_id>/',dynamic_lookup_view,name='product'),
+    path('product/<int:my_id>/delete/',product_dele_view,name = 'product-delete')
 
 ]
