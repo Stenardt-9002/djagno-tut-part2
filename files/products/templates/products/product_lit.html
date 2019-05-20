@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- {{objet_list}}  -->
+
+{% for ints in objet_list %}
+    <p>{{ints.id}} - {{ints.title}} </p>
+
+{% endfor %}
+
+{% endblock %}

@@ -133,3 +133,9 @@ def product_dele_view(request,my_id):
     }
     return render(request,"products/product_delete.html",contxt)
 
+def product_lit_vew(request):
+    queryset = Product.objects.all()
+    contxt = {
+        "objet_list" : queryset
+    }
+    return render(request,"products/product_lit.html",contxt)
