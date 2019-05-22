@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- {{objet_list}}  -->
+
+{% for ints in objet_list %}
+    <p>{{ints.id}} - {{ints.title}} </p>
+    <!-- <p><a href="'/products/{{ints.id}}/'">{{ints.title}}</a></p> -->
+    <p>{{ints.id}} <a href="{{ints.get_absolute_url}}"> {{ints.title}} </a> </p>
+
+{% endfor %}
+
+{% endblock %}
