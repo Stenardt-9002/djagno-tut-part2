@@ -13,4 +13,5 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         # return f"/product/{self.id}/"
-        return reverse("product-dtail",kwargs = {"my_id":self.id })
+        return reverse("products:product-dtail",kwargs = {"my_id":self.id })
+#name is based on app itself so that name uniquess is maintained
