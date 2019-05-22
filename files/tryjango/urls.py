@@ -25,6 +25,7 @@ from products.views import *
 
 
 urlpatterns = [
+    path('blog/',include('blog.urls')),
     path('products/',include('products.urls')),
     path('admin/', admin.site.urls),
     path('',home_view,name='home'),
